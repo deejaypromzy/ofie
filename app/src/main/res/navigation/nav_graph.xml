@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.projectwork.ofie.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/home">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_CookingFragment"
+            app:destination="@id/Cooking" />
+        <action
+            android:id="@+id/action_FirstFragment_to_CleaningFragment"
+            app:destination="@id/CleaningFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CleaningFragment"
+        android:name="com.projectwork.ofie.CleaningFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_cleaning">
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.projectwork.ofie.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/handwashing">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CookingFragment"
+        android:name="com.projectwork.ofie.CookingFagment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_cooking">
+    </fragment>
+
+    <fragment
+        android:id="@+id/Cooking"
+        android:name="com.projectwork.ofie.Cooking"
+        android:label="@string/app_name"
+        tools:layout="@layout/cooking">
+    </fragment>
+</navigation>
